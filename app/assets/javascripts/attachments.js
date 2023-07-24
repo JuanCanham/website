@@ -2,27 +2,6 @@ $(document).ready(function() {
   // The default caption is misleading, it isn't clear that you can edit
   // the field to set your own caption. Remove the default, which fills
   // in a much nicer "Add a caption..." message.
-  Trix.config.attachments.preview.caption = {
-    name: false,
-    size: false
-  };
-
-  // This will fire when any file is drag-and-dropped on the editor.
-  $('.trix-editor-wrapper').on('trix-attachment-add', function(event) {
-    var attachment = event.originalEvent.attachment;
-    if (attachment.file) {
-      uploadFile(attachment.file, function(progress) {
-        return attachment.setUploadProgress(progress);
-      }, function(url) {
-        return attachment.setAttributes({ url: url, href: url });
-      });
-    }
-  });
-
-  $('.s3_url').each(function(i, form_element) {
-    setupS3UrlField($(form_element));
-    refreshImagePreview($(form_element));
-  });
 });
 
 

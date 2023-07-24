@@ -35,7 +35,6 @@ gem 'rails', '~> 5.1.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'simple_calendar', '~> 2.0'
-gem 'trix'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Use Uglifier as compressor for JavaScript assets
